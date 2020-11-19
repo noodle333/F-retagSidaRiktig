@@ -1,0 +1,333 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+body {
+  background-color: #333333;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* 
+h3 {
+  color: #48b34f;
+}
+
+h1 {
+  color: #98ff9f;
+} */
+
+.container {
+  width: 100%;
+  max-width: 98rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-button {
+  width: 6rem;
+}
+
+.openmenu {
+  position: fixed;
+  top: 1vw;
+  right: 3vw;
+  font-size: 3rem;
+  color: white;
+}
+
+.openmenu p {
+  font-size: 2.5rem;
+}
+
+.nav-list {
+  width: 25rem;
+  height: 100vh;
+  background-color: #98ff9f;
+  position: fixed;
+  top: 0;
+  right: -26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  transition: all 650ms ease-in-out;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle:checked + .nav-list {
+  right: 0;
+}
+
+.nav-item {
+  margin: 1.5rem 0;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.merch {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(
+      135deg,
+      rgba(23, 146, 60, 0.7) 0%,
+      rgba(72, 179, 79, 0.5) 100%
+    ),
+    url("homebg.jpg"), center no-repeat;
+
+  background-size: cover;
+  position: relative;
+}
+
+.first-message {
+  width: 100%;
+  max-width: 40rem;
+  color: white;
+  text-transform: uppercase;
+  transform: translateY(20%);
+  
+}
+
+.first-message h3 {
+  font-size: 1.2rem;
+  margin: 0.8rem;
+}
+
+.first-message h1 {
+  font-size: 2.5rem;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}
+
+.first-message p {
+  font-size: 1rem;
+  margin: 0.8rem;
+  margin-top: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn {
+  background-color: #98ff9f;
+  border-radius: 2rem;
+  color: white;
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 1rem 2.5rem;
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 0.16fr));
+  grid-gap: 2.5rem;
+  padding-top: 4rem;
+}
+
+.merch-grid-item {
+  height: 20rem;
+  padding: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.merch-grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  z-index: -1;
+ 
+}
+
+.hoodie-one {
+  background: url("hoodie_1.png") center no-repeat;
+}
+
+.hoodie-two {
+  background: url("hoodie_2.png") center no-repeat;
+}
+
+.hoodie-three {
+  background: url("hoodie_3.png") center no-repeat;
+}
+
+.music {
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.title h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.title p {
+  text-transform: lowercase;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2.5rem;
+}
+
+.music-grid-item {
+  height: 40rem;
+  padding: 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.music-grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    135deg,
+    rgba(23, 146, 60, 0.5) 0%,
+    rgba(72, 179, 79, 0.4) 100%
+  );
+  z-index: -1;
+}
+
+.music-grid-item h1 {
+  text-align: center;
+}
+
+.album-one {
+  background: url("album_one.jpg") center no-repeat;
+}
+
+.album-two {
+  background: url("album_two.jpg") center no-repeat;
+}
+
+.album-three {
+  background: url("album_three.jpg") center no-repeat;
+}
+
+footer {
+  padding: 1.5rem 0;
+  background-color: #333333;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 350px) {
+  .first-message {
+    transform: tranlateY(40%);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    height: 8rem;
+  }
+  .nav-button {
+    width: 3.5rem;
+  }
+  .nav-list,
+  .current {
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    top: initial;
+    right: initial;
+    display: flex;
+    flex-direction: row;
+    transition: initial;
+  }
+  .openmenu p {
+    display: none;
+  }
+  .nav-item {
+    margin: 0 2.5rem;
+  }
+  .nav-link {
+    color: white;
+    position: relative;
+    font-size: 1.3rem;
+  }
+}
