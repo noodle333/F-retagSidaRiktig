@@ -165,7 +165,11 @@ nav {
   color: white;
   display: inline-block;
   margin-top: 0.5rem;
-  padding: 1rem 2.5rem;
+  padding: 1rem 2rem;
+}
+
+.btn:hover{
+  background-color: #6cb371;
 }
 
 .merch-grid {
@@ -300,6 +304,8 @@ footer p {
   }
 }
 
+
+
 @media screen and (min-width: 700px) {
   header {
     height: 8rem;
@@ -307,27 +313,52 @@ footer p {
   .nav-button {
     width: 3.5rem;
   }
-  .nav-list,
-  .current {
+  .nav-list {
     width: initial;
     height: initial;
     background-color: transparent;
     position: initial;
     top: initial;
     right: initial;
-    display: flex;
     flex-direction: row;
     transition: initial;
-  }
-  .openmenu p {
+  } 
+  .openmenu{
     display: none;
   }
   .nav-item {
     margin: 0 2.5rem;
   }
-  .nav-link {
+  .nav-link,
+  .current {
     color: white;
     position: relative;
     font-size: 1.3rem;
+  }
+
+  .nav-link::before,
+  .curent::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    background-color: #98ff9f;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 650ms;
+  }
+
+  .current::before {
+    transform: scaleX(1);
+  }
+    
+  .nav-link:hover::before{
+    transform: scaleX(1);
+  }
+
+  .main-message{
+    transform: translateY(80%);
   }
 }
