@@ -79,6 +79,7 @@ nav {
   right: 3vw;
   font-size: 3rem;
   color: white;
+  z-index: 1500;
 }
 
 .openmenu p {
@@ -201,6 +202,7 @@ nav {
   color: white;
   display: inline-block;
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
   padding: 1rem 2rem;
 }
 
@@ -256,11 +258,40 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
   z-index: 1;
 }
 
 .openstore-grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.scrim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 0.3fr));
+  grid-gap: 2.5rem;
+  padding-top: 6rem;
+  margin-left: 2rem;
+  margin-bottom: 18rem;
+}
+
+.scrim-grid-item {
+  height: 300%;
+  width: 320%;
+  padding: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: -1;
+}
+
+.scrim-grid-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -277,6 +308,7 @@ nav {
   padding-top: 4rem;
   background-color: #98ff9f;
   margin-top: 2rem;
+  
 }
 
 .store-grid-item {
@@ -287,7 +319,15 @@ nav {
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.album {
+  margin-bottom: 8rem;
+}
+
+.footer {
+  margin-bottom: 3rem;
 }
 
 .store-grid-item::before {
@@ -300,28 +340,38 @@ nav {
   z-index: -1;
 }
 
-.store-one {
+.shop-one {
   background: url("shop.png") center no-repeat;
+ 
 }
 
 .hoodie-one {
   background: url("hoodie_1.jpg") center no-repeat;
+  
 }
 
 .hoodie-two {
   background: url("hoodie_2.jpg") center no-repeat;
+  
 }
 
 .hoodie-three {
   background: url("hoodie_3.jpg") center no-repeat;
+  
 }
 
 .hoodie-four {
   background: url("hoodie_4.jpg") center no-repeat;
+  
 }
 
 .hoodie-five {
   background: url("hoodie_5.jpg") center no-repeat;
+  
+}
+
+.suicide-boys {
+  background: url("suicide.png") center no-repeat;
 }
 
 .music {
@@ -394,6 +444,18 @@ nav {
   background: url("album_three.jpg") center no-repeat;
 }
 
+.store-one {
+  background: url("store_one.png") center no-repeat;
+}
+
+.store-two {
+  background: url("store_two.jpg") center no-repeat;
+}
+
+.store-three {
+  background: url("store_three.jpg") center no-repeat;
+}
+
 .about-m {
   width: 100%;
   height: 80vh;
@@ -461,6 +523,10 @@ nav {
   margin: 2rem;
 }
 
+.about-grid-item p {
+  font-size: 1rem;
+}
+
 footer {
   padding: 2rem 0;
   background: linear-gradient(
@@ -475,15 +541,31 @@ footer p {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 350px) {
+  .about-grid-item p{
+    transform: translateX(-10%);
+    padding-right: 5rem;
+  }
+}
+
 @media screen and (min-width: 350px) {
   .first-message {
-    transform: tranlateY(40%);
+    transform: translateY(40%);
   }
   .main-message {
     transform: translateY(40%);
   }
+  .about-grid-item p {
+    transform: translateY(40%);
+  }
+  .storebtn {
+    padding-bottom: 4rem;
+  }
+  .store-grid-item {
+    padding-right: 2rem;
+  }
+  
 }
-
 
 @media screen and (min-width: 700px) {
   header {
@@ -514,7 +596,6 @@ footer p {
     position: relative;
     font-size: 1.3rem;
   }
-
   .nav-link::before,
   .curent::before {
     content: "";
@@ -528,16 +609,16 @@ footer p {
     transform-origin: left;
     transition: transform 650ms;
   }
-
   .current::before {
     transform: scaleX(1);
   }
-    
   .nav-link:hover::before{
     transform: scaleX(1);
   }
-
   .main-message{
     transform: translateY(80%);
+  }
+  .about-grid-item p {
+    font-size: 1.3rem;
   }
 }
