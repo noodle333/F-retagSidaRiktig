@@ -86,12 +86,12 @@ nav {
 }
 
 .nav-list {
-  width: 25rem;
+  width: 20rem;
   height: 100vh;
   background-color: #98ff9f;
   position: fixed;
   top: 0;
-  right: -26rem;
+  right: -21rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,7 +123,7 @@ nav {
   height: 90vh;
   background: linear-gradient(
       135deg,
-      rgba(23, 146, 60, 0.7) 0%,
+      rgba(24, 177, 70, 0.6) 0%,
       rgba(72, 179, 79, 0.5) 100%
     ),
     url("homebg.jpg"), center no-repeat;
@@ -159,8 +159,44 @@ nav {
   text-transform: lowercase;
 }
 
+.store {
+  width: 100%;
+  height: 90vh;
+}
+
+.store-message {
+  width: 100%;
+  max-width: 40rem;
+  color: white;
+  text-transform: uppercase;
+  transform: translateY(20%);
+  
+}
+
+.store-message h3 {
+  font-size: 1.2rem;
+  margin: 0.8rem;
+}
+
+
+
+.store-message h1 {
+  font-size: 2.5rem;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  color: #98ff9f;
+  
+}
+
+.store-message p {
+  font-size: 1rem;
+  margin: 0.8rem;
+  margin-top: 0.5rem;
+  text-transform: lowercase;
+}
+
 .btn {
-  background-color: #98ff9f;
+  background-color: #6cb371;
   border-radius: 2rem;
   color: white;
   display: inline-block;
@@ -168,8 +204,12 @@ nav {
   padding: 1rem 2rem;
 }
 
+.musicbtn {
+  margin-top: 1rem;
+}
+
 .btn:hover{
-  background-color: #6cb371;
+  background-color: #5b945f;
 }
 
 .merch-grid {
@@ -197,26 +237,91 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  
-  background-image: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 0.4) 100%
-  );
   z-index: -1;
- 
+}
+
+.openstore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 0.3fr));
+  grid-gap: 2.5rem;
+  padding-top: 4rem;
+  margin-top: 2rem;
+}
+
+.openstore-grid-item {
+  height: 200%;
+  width: 150%;
+  padding: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  z-index: 1;
+}
+
+.openstore-grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 0.16fr));
+  grid-gap: 2.5rem;
+  padding-top: 4rem;
+  background-color: #98ff9f;
+  margin-top: 2rem;
+}
+
+.store-grid-item {
+  height: 20rem;
+  padding: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.store-grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.store-one {
+  background: url("shop.png") center no-repeat;
 }
 
 .hoodie-one {
-  background: url("hoodie_1.png") center no-repeat;
+  background: url("hoodie_1.jpg") center no-repeat;
 }
 
 .hoodie-two {
-  background: url("hoodie_2.png") center no-repeat;
+  background: url("hoodie_2.jpg") center no-repeat;
 }
 
 .hoodie-three {
-  background: url("hoodie_3.png") center no-repeat;
+  background: url("hoodie_3.jpg") center no-repeat;
+}
+
+.hoodie-four {
+  background: url("hoodie_4.jpg") center no-repeat;
+}
+
+.hoodie-five {
+  background: url("hoodie_5.jpg") center no-repeat;
 }
 
 .music {
@@ -226,7 +331,7 @@ nav {
 .title {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -237,6 +342,7 @@ nav {
 
 .title p {
   text-transform: lowercase;
+  font-size: 1.2rem;
 }
 
 .music-grid {
@@ -246,14 +352,15 @@ nav {
 }
 
 .music-grid-item {
-  height: 40rem;
+  height: 45rem;
   padding: 5rem;
+  margin-bottom: 5rem;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  z-index: 1;
+  z-index: -1;
 }
 
 .music-grid-item::before {
@@ -287,9 +394,79 @@ nav {
   background: url("album_three.jpg") center no-repeat;
 }
 
+.about-m {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(
+    135deg,
+    rgba(23, 146, 60, 0.6) 0%,
+    rgba(72, 179, 79, 0.5) 100%), url("homebg.jpg") center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.about-m::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.7rem;
+}
+
+.about-music {
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.about-box {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-box h3 {
+  position: absolute;
+  top: -8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.about-critics img{
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  border: 3px solid #98ff9f;
+  
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-grid p {
+  color: rgba(255,255,255, 0.7);
+  margin: 2rem;
+}
+
 footer {
-  padding: 1.5rem 0;
-  background-color: #333333;
+  padding: 2rem 0;
+  background: linear-gradient(
+    135deg,
+    rgba(23, 146, 60, 0.7) 0%,
+    rgba(72, 179, 79, 0.6) 100%), url("homebg.jpg") center no-repeat;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -302,8 +479,10 @@ footer p {
   .first-message {
     transform: tranlateY(40%);
   }
+  .main-message {
+    transform: translateY(40%);
+  }
 }
-
 
 
 @media screen and (min-width: 700px) {
