@@ -248,6 +248,7 @@ nav {
   grid-gap: 2.5rem;
   padding-top: 4rem;
   margin-top: 2rem;
+  
 }
 
 .openstore-grid-item {
@@ -278,6 +279,11 @@ nav {
   padding-top: 6rem;
   margin-left: 2rem;
   margin-bottom: 18rem;
+  background: linear-gradient(
+      135deg,
+      rgba(24, 177, 70, 0.6) 0%,
+      rgba(72, 179, 79, 0.5) 100%
+    ), url("suicide.jpg") center no-repeat;
 }
 
 .scrim-grid-item {
@@ -306,8 +312,14 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(2rem, 0.16fr));
   grid-gap: 2.5rem;
   padding-top: 4rem;
-  background-color: #98ff9f;
+  background: linear-gradient(
+    135deg,
+    rgba(24, 177, 70, 0.6) 0%,
+    rgba(72, 179, 79, 0.5) 100%
+  ),
+  url("homebg.jpg"), center no-repeat;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   
 }
 
@@ -346,32 +358,34 @@ nav {
 }
 
 .hoodie-one {
-  background: url("hoodie_1.jpg") center no-repeat;
+  background: url("hoodie_1.png") center no-repeat;
   
 }
 
 .hoodie-two {
-  background: url("hoodie_2.jpg") center no-repeat;
+  background: url("hoodie_2.png") center no-repeat;
   
 }
 
 .hoodie-three {
-  background: url("hoodie_3.jpg") center no-repeat;
+  background: url("hoodie_4.png") center no-repeat;
   
 }
 
-.hoodie-four {
-  background: url("hoodie_4.jpg") center no-repeat;
-  
+.pants-one {
+  background: url("pants_1.png") center no-repeat;
 }
 
-.hoodie-five {
-  background: url("hoodie_5.jpg") center no-repeat;
-  
+.pants-two {
+  background: url("pants_2.png") center no-repeat;
+}
+
+.pants-three {
+  background: url("pants_3.png") center no-repeat;
 }
 
 .suicide-boys {
-  background: url("suicide.png") center no-repeat;
+  background: url("suicide.jpg") center no-repeat;
 }
 
 .music {
@@ -462,7 +476,7 @@ nav {
   background: linear-gradient(
     135deg,
     rgba(23, 146, 60, 0.6) 0%,
-    rgba(72, 179, 79, 0.5) 100%), url("homebg.jpg") center no-repeat fixed;
+    rgba(72, 179, 79, 0.5) 100%), url("homebg_2.jpg") center no-repeat fixed;
     background-size: cover;
     position: relative;
     
